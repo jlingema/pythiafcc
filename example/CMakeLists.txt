@@ -9,6 +9,6 @@ endif()
 
 install(TARGETS pythiafcc-generate DESTINATION bin)
 
-add_test(NAME generate COMMAND pythiafcc-generate)
+add_test(NAME generate COMMAND pythiafcc-generate ${CMAKE_INSTALL_PREFIX}/../example/ee_ttbar.txt)
 set_property(TEST generate PROPERTY ENVIRONMENT LD_LIBRARY_PATH=${CMAKE_INSTALL_PREFIX}/lib:${CMAKE_INSTALL_PREFIX}/examples:$ENV{LD_LIBRARY_PATH})
 
