@@ -17,6 +17,8 @@ else()
 	set(HEPMC_PREFIX $ENV{HEPMC_PREFIX})
 endif()
 
+# enable test facilities
+include(CTest)
 
 # Set up C++11
 set(CPP11FLAGS "-std=c++11")
