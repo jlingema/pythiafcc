@@ -29,11 +29,11 @@ void MyAnalysis::loop(const char* filename) {
   try {
     reader.openFile("example.root");
   }
-  store.setReader(&reader);
   catch(std::runtime_error& err) {
     std::cerr<<err.what()<<". Quitting."<<std::endl;
     exit(1);
   }
+  store.setReader(&reader);
   bool verbose = true;
 
   // unsigned nEvents = 5;
